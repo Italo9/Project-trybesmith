@@ -6,4 +6,9 @@ const addProducts = async (product: IProducts) => {
   return result;
 };
 
-export default { addProducts };
+const getAll = async () => {
+  const result = await productsModel.getAll();
+  return result;
+};
+
+export default { addProducts, getAll };

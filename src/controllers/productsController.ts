@@ -13,4 +13,9 @@ const addProducts = async (req: Request, res: Response, next: NextFunction) => {
   }
 };
 
-export default { addProducts };
+const getAll = async (_req: Request, res: Response) => {
+  const result = await productsService.getAll();
+  res.status(200).json(result);
+};
+
+export default { addProducts, getAll };
